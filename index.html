@@ -9,6 +9,13 @@
     <div id="app">
         <h1>{{titulo}}</h1>
 
+        <ul>
+            <div id="input">Escribe nueva fruta: <input type="text"> <button>Enviar</button>
+            </div>
+            <li v-for="fruta in frutas">{{fruta.alimento}}<button>+</button></li> 
+            
+        </ul>
+
     </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
