@@ -10,11 +10,14 @@
         <h1>{{titulo}}</h1>
 
         <input type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
-        <button @click="agregarequipo">Agregar</button>
+        <button @click="agregarequipo" @click="agregarcantidad">Agregar</button>
 
         <ul>
             <li v-for="item of equipos">
-                {{item.cantidad}} - {{item.nombre}}
+                <input type="number" v-model.number="item.cantidad">
+                {{item.nombre}}
+                <button @click="item.cantidad++">+</button>
+                <button @click="item.cantidad--">-</button>
                 <span v-if="item.cantidad===0"> - sin stock</span>
             </li>
         </ul>

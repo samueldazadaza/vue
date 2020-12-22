@@ -13,9 +13,11 @@ const app = new Vue({
     methods:{
         agregarequipo () {
             this.equipos.push({ //this = para accedes al data
-                nombre: this.nuevoequipo, cantidad:0, //trae datos desde input desde html
+                nombre: this.nuevoequipo,
+                cantidad: this.nuevoequipo, //trae datos desde input desde html
             });
             this.nuevoequipo = ''; // para borrar texto pegote de html del input
-        }
+        },
+        
     }
 })
