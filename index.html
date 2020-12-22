@@ -14,13 +14,17 @@
         <button class="btn btn-success" @click="agregarequipo" @click="agregarcantidad">Agregar</button>
 
         <ul class="mt-5">
+<div class="row">
             <li class="mt-2" v-for="item of equipos">
+<div class="col-xs-3">
                 <input type="number" v-model.number="item.cantidad">
                 {{item.nombre}}
+</div>
                 <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
                 <button @click="item.cantidad--" class="btn btn-dark rounded">-</button>
                 <span v-if="item.cantidad===0"> - sin stock</span>
             </li>
+</div>
         </ul>
         <h4>Total: {{sumarequipos}}</h4>
 
