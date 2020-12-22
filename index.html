@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo Vue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="mt-5 container shadow-lg p-3 mb-5 bg-white rounded">
         <h1>{{titulo}}</h1>
 
-        <input type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
+        <input class="mx-auto" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
         <button @click="agregarequipo" @click="agregarcantidad">Agregar</button>
 
-        <ul>
-            <li v-for="item of equipos">
+        <ul class="mt-5">
+            <li class="mt-2" v-for="item of equipos">
                 <input type="number" v-model.number="item.cantidad">
                 {{item.nombre}}
-                <button @click="item.cantidad++">+</button>
-                <button @click="item.cantidad--">-</button>
+                <button @click="item.cantidad++" class="btn btn-info rounded-pill">+</button>
+                <button @click="item.cantidad--" class="btn btn-danger rounded-pill">-</button>
                 <span v-if="item.cantidad===0"> - sin stock</span>
             </li>
         </ul>
