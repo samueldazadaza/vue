@@ -10,7 +10,7 @@
     <div id="app" class="mt-5 container shadow-lg p-3 mb-5 bg-white rounded">
         <h1>{{titulo}}</h1>
 
-        <input class="mx-auto" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
+        <input class="col-xs-4 mx-auto" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
         <button class="btn btn-success" @click="agregarequipo" @click="agregarcantidad">Agregar</button>
 
         <ul class="mt-5">
