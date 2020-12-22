@@ -11,14 +11,14 @@
         <h1>{{titulo}}</h1>
 
         <input class="mx-auto" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo">
-        <button @click="agregarequipo" @click="agregarcantidad">Agregar</button>
+        <button class="btn btn-success" @click="agregarequipo" @click="agregarcantidad">Agregar</button>
 
         <ul class="mt-5">
             <li class="mt-2" v-for="item of equipos">
                 <input type="number" v-model.number="item.cantidad">
                 {{item.nombre}}
-                <button @click="item.cantidad++" class="btn btn-info rounded-pill">+</button>
-                <button @click="item.cantidad--" class="btn btn-danger rounded-pill">-</button>
+                <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
+                <button @click="item.cantidad--" class="btn btn-dark rounded">-</button>
                 <span v-if="item.cantidad===0"> - sin stock</span>
             </li>
         </ul>
