@@ -10,10 +10,10 @@
         <h1>{{titulo}}</h1>
 
         <ul>
-            <div id="input">Escribe nueva fruta: <input type="text"> <button>Enviar</button>
-            </div>
-            <li v-for="fruta in frutas">{{fruta.alimento}}<button>+</button></li> 
-            
+            <li v-for="item of frutas">
+                {{item.cantidad}} - {{item.nombre}}
+                <span v-if="item.cantidad===0"> - sin stock</span>
+            </li>
         </ul>
 
     </div>
