@@ -9,8 +9,11 @@
     <div id="app">
         <h1>{{titulo}}</h1>
 
+        <input type="text" v-model="nuevoequipo">
+        <button @click="agregarequipo">Agregar</button>
+
         <ul>
-            <li v-for="item of frutas">
+            <li v-for="item of equipos">
                 {{item.cantidad}} - {{item.nombre}}
                 <span v-if="item.cantidad===0"> - sin stock</span>
             </li>
