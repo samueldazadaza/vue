@@ -1,3 +1,10 @@
 #{
     background-color: gray;
 }
+
+input{
+    width: 22px;
+}
+.elemento{
+    width: 200px;
+}
