@@ -14,14 +14,14 @@
             <h4 class="text-primary text-center">Total: {{sumarequipos}} articulos de la empresa</h4>
         <h3>Favor introduce elemento a crear:</h3>
             <!-- nueva tarjeta -->
-        <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="Introduce item a agregar">
+        <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="Escribe el articulo">
         <button class="btn btn-success" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
-            <!-- CARD BOX -->
+            <!-- CARD BOX ITERACION -->
             <ol class="mt-5">
                 <li class="m-2" v-for="item of equipos">
                     <div style="width: 300px;">
                             <!-- CUADRITO -->
-                        <div id="elemento" class="shadow p-3 container-fluid border-primary mt-3 rounded">
+                        <div id="elemento" class=" p-3 shadow border rounded">
                             <input type="number" v-model.number="item.cantidad" class="col-lg-3" style="width: 40px;">
                             <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
                             <button @click="item.cantidad--" class="btn btn-dark rounded-circle">-</button>
