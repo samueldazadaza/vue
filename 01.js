@@ -3,9 +3,9 @@ const app = new Vue({
     data: { //abrir otro objeto
         titulo: 'Aplicativo para crear inventario en empresa',
         equipos: [ //contruyendo objetos dentro de array dentro de llaves
-            {nombre:'Laptops', cantidad:10},
-            {nombre:'Mesas', cantidad:0},
-            {nombre:'Sillas', cantidad:11},
+            {nombre:'Video gatuno', cantidad:10, user:'User: Cat10', url:'https://source.unsplash.com/250x150/?cat'},
+            {nombre:'Video perruno', cantidad:0, user:'User: Dogstyle', url:'https://source.unsplash.com/250x150/?dog'},
+            {nombre:'video de pajaritos', cantidad:11, user:'User: BirdBox', url:'https://source.unsplash.com/250x150/?bird'},
         ],
         nuevoequipo: '',
         total: 0
@@ -14,7 +14,10 @@ const app = new Vue({
     methods:{
         agregarequipo () {
             this.equipos.push({ //this = para accedes al data
-                nombre: this.nuevoequipo, cantidad:0 //trae datos desde input desde html
+                nombre: this.nuevoequipo,//trae datos desde input desde html
+                cantidad:0,
+                url:'https://source.unsplash.com/250x150/',
+                user: 'User: Undifined',
             });
             this.nuevoequipo = ''; // para borrar texto pegote de html del input
         }

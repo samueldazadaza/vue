@@ -4,35 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo Vue</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div id="app" class="container">
-        <div class="container text-white text-center bg-dark bg-gradient rounded-3 shadow-lg col-8">    
-        <h1>{{titulo}}</h1>
+
+
+    <div id="app" class="">
+        <div class="">    
+            <h1>{{titulo}}</h1>
         </div>
-            <h4 class="text-primary text-center">Total: {{sumarequipos}} articulos de la empresa</h4>
-        <h3>Favor introduce elemento a crear:</h3>
-            <!-- nueva tarjeta -->
-        <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="Escribe el articulo">
-        <button class="btn btn-success" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
-            <!-- CARD BOX ITERACION -->
-            <ol class="mt-5">
-                <li class="m-2" v-for="item of equipos">
-                    <div style="width: 300px;">
-                            <!-- CUADRITO -->
-                        <div id="elemento" class=" p-3 shadow border rounded">
-                            <input type="number" v-model.number="item.cantidad" class="col-lg-3" style="width: 40px;">
-                            <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
-                            <button @click="item.cantidad--" class="btn btn-dark rounded-circle">-</button>
-                                {{item.nombre}}
-                            <span v-if="item.cantidad===0"> - Sin Stock</span>
+            <h4 class="">Total: {{sumarequipos}} articulos de la empresa</h4>
+            <h3>Favor introduce elemento a crear:</h3>
+        <!-- nueva tarjeta -->
+            <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="Escribe el articulo">
+            <button class="" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
+
+            <section class="container" >
+                <div class="box" v-for="item of equipos">
+                        <img class="imgvideo" v-bind:src="item.url" alt="imagen aleatoria">
+                    <div class="datos">
+                        <img class="imgicon" src="./icon.png" alt="">
+                        <div class="usuario">
+                            <span class="nombre">{{item.user}}</span>
+                            <span class="user">{{item.nombre}}</span>
                         </div>
                     </div>
-                </li>
-            </ol>
+                </div>
+            </section>
         
+
+            <!-- CARD YOUTUBE -->
+
+        <div>
+            <div class="list">
+                <div v-for="item of equipos">
+                    <div id="elemento" class="elemento">
+                            
+                        <div class="card">
+                            <img class="card-img-top" src="https://source.unsplash.com/250x150/?dev" alt="">
+                            <h5 class="card-title">{{item.nombre}}</h5>
+                            <p class="card-text">{{item.user}}</p> <br>
+                                <input type="number" v-model.number="item.cantidad" class=""> 
+                                <button @click="item.cantidad++" class="">+</button>
+                                <button @click="item.cantidad--" class="">-</button>
+                                {{item.nombre}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+                <!-- CARD BOX ITERACION
+                <ol class="mt-5">
+                    <li class="m-2" v-for="item of equipos">
+                        <div style="width: 300px;">
+                                <!-- CUADRITO -->
+                            <div id="elemento" class=" p-3 shadow border rounded">
+                                <input type="number" v-model.number="item.cantidad" class="col-lg-3" style="width: 40px;">
+                                <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
+                                <button @click="item.cantidad--" class="btn btn-dark rounded-circle">-</button>
+                                    {{item.nombre}}
+                                <span v-if="item.cantidad===0"> - Sin Stock</span>
+    
+                            </div>
+                            
+                        </div>
+                    </li>
+                </ol> -->
+    
 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
