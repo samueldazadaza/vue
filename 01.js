@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app', //dentro de este id se trabajara con vue
     data: { //abrir otro objeto
-        titulo: 'Aplicativo para crear inventario en empresa',
+        titulo: 'Aplicativo para añadir videos a LAYOUT desde VUE',
         equipos: [ //contruyendo objetos dentro de array dentro de llaves
             {nombre:'Video gatuno', cantidad:10, user:'User: Cat10', url:'https://source.unsplash.com/250x150/?cat'},
             {nombre:'Video perruno', cantidad:0, user:'User: Dogstyle', url:'https://source.unsplash.com/250x150/?dog'},

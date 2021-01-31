@@ -10,10 +10,13 @@ html {
 #app{
     background-color: rgb(236, 236, 236);
 }
-.titulo {
+.titulo h3{
     font-size: 1.4rem;
     text-align: center;
     background-color: rgb(157, 250, 237);
+}
+.titulo h4{
+    
 }
 .imgvideo {
     width: 140px;
