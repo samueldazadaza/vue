@@ -17,7 +17,7 @@ const app = new Vue({
                 nombre: this.nuevoequipo,//trae datos desde input desde html
                 cantidad:0,
                 url:'https://source.unsplash.com/250x150/',
-                user: 'User: Undifined',
+                user: 'User: NameX',
             });
             this.nuevoequipo = ''; // para borrar texto pegote de html del input
         }
