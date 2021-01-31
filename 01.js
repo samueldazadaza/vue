@@ -5,7 +5,7 @@ const app = new Vue({
         equipos: [ //contruyendo objetos dentro de array dentro de llaves
             {nombre:'Video gatuno', cantidad:10, user:'User: Cat10', url:'https://source.unsplash.com/250x150/?cat'},
             {nombre:'Video perruno', cantidad:0, user:'User: Dogstyle', url:'https://source.unsplash.com/250x150/?dog'},
-            {nombre:'video de pajaritos', cantidad:11, user:'User: BirdBox', url:'https://source.unsplash.com/250x150/?bird'},
+            {nombre:'video de aves', cantidad:11, user:'User: BirdBox', url:'https://source.unsplash.com/250x150/?bird'},
         ],
         nuevoequipo: '',
         total: 0

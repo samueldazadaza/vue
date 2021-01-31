@@ -10,6 +10,11 @@ html {
 #app{
     background-color: rgb(236, 236, 236);
 }
+.titulo {
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: rgb(157, 250, 237);
+}
 .imgvideo {
     width: 200px;
     border-radius: 5px;
@@ -33,9 +38,12 @@ html {
 }
 .box .nombre{
     display: flex;
+    color: gray
 }
 .box .user{
     display: flex;
+    color: gray;
+    font-weight: bold;
 }
 .box .usuario {
     margin-left: 10px;
