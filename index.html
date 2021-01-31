@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Vue</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="app" class="layout">
+
+        <div class="header">
+            <div>⏰</div>
+            <div>App-Notes</div>
+            <div>🙍‍</div>
+        </div>
+
+        <!-- SECCION TITULO INICIAL -->
+        <div class="titulo">    
+            <h3>{{titulo}}</h1>
+            <h5 class="">Total: {{sumarequipos}} videos</h4>
+        </div>
+    
+        <!-- nueva tarjeta -->
+            <h3>Favor introduce elemento a crear:</h3>
+            <div class="input">
+                <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="  Nombre del video">
+            </div>
+            <button class="" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
+       
+            <div class="videito">
+                <!-- nuevo layout -->
+                <div id="caja" v-for="item of equipos">
+                    <div id="div1"><img class="imgvideo" v-bind:src="item.url" alt="img aleatoria">
+                    </div>
+                    <div id="div2"><span>3:56</span></div>
+                    <div id="div3"><img class="imgicon" src="./icon.jpg" alt=""></div>
+                    <div id="div4">{{item.user}}</div>
+                    <div id="div5">{{item.nombre}}</div>
+                    <div id="div6">
+                        <a href="#">💙</a>
+                        <a href="#">🙂</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CARD CON IMAGEN -->
+            <!-- <section class="container" >
+                <div class="box" v-for="item of equipos">
+                        <img class="imgvideo" v-bind:src="item.url" alt="imagen aleatoria">
+                    <div class="datos">
+                        <img class="imgicon" src="./icon.jpg" alt="">
+                        <div class="usuario">
+                            <span class="nombre">{{item.user}}</span>
+                            <span class="user">{{item.nombre}}</span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+       <!-- CARD BOX ITERACION
+            <ol class="mt-5">
+                <li class="m-2" v-for="item of equipos">
+                    <div style="width: 300px;">
+                        CUADRITO
+                        <div id="elemento" class=" p-3 shadow border rounded">
+                            <input type="number" v-model.number="item.cantidad" class="col-lg-3" style="width: 40px;">
+                            <button @click="item.cantidad++" class="btn btn-info rounded-circle">+</button>
+                            <button @click="item.cantidad--" class="btn btn-dark rounded-circle">-</button>
+                                {{item.nombre}}
+                            <span v-if="item.cantidad===0"> - Sin Stock</span>
+                        </div>
+                    </div>
+                </li>
+            </ol> -->
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="01.js"></script>
+</body>
+</html>
