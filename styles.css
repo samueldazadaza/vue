@@ -24,7 +24,6 @@ html {
     width: 36px;
 }
 .container{
-    border: .1rem solid black;
     display: flex;
     flex-wrap: wrap;
 }
