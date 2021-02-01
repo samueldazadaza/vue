@@ -7,6 +7,11 @@ html {
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
 }
+.elemento-crear{
+    margin-top: 33px;
+    margin-left: 20px;
+    margin-bottom: -7px;
+}
 #app{
     background-color: rgb(236, 236, 236);
 }
