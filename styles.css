@@ -96,7 +96,7 @@ a:hover{
     top: 30px;
 }
 .input input {
-    width: 80%;
+    width: 100%;
     border-radius: 100px;
     border: 1px solid #dfe1e5;
     justify-content: center;
