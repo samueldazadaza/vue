@@ -10,9 +10,9 @@
     <div id="app" class="layout">
 
         <div class="header">
-            <div>⏰</div>
-            <div>App-Notes</div>
-            <div>🙍‍</div>
+            <div class="menu1">⏰</div>
+            <div class="menu2">App-Notes</div>
+            <div class="menu3">🙍‍</div>
         </div>
 
         <!-- SECCION TITULO INICIAL -->
@@ -25,9 +25,8 @@
             <h3>Favor introduce elemento a crear:</h3>
             <div class="input">
                 <input class="" type="text" v-model="nuevoequipo" @keyup.enter="agregarequipo" placeholder="  Nombre del video">
+                <button class="" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
             </div>
-            <button class="" @click="agregarequipo" @click="agregarcantidad" >Agregar</button>
-       
             <div class="videito">
                 <!-- nuevo layout -->
                 <div id="caja" v-for="item of equipos">

@@ -72,19 +72,37 @@ a{
 a:hover{
     font-size: 22px;
 }
+.input button{
+    margin-top: 7px;
+    margin-left: -70px;
+    border-radius: 20px;
+    height: 25px;
+    padding: 5px;
+    background-color: rgb(88, 10, 112);
+    border-style: none;
+    outline: none;
+    color: white;
+}
+.input button:hover{
+    background-color: green;
+    box-shadow: 0px 0px 5px 5px red;
+}
 .input{
+    display: flex;
+    flex-wrap: ;
     border: ;
     margin: 10px;
-    height: 33px;
+    height: 40px;
+    top: 30px;
 }
 .input input {
-    width: 525px;
+    width: 80%;
     border-radius: 100px;
     border: 1px solid #dfe1e5;
     justify-content: center;
     align-items: center;
     outline: none;
-    height: 30px;
+    height: 40px;
     border-radius: 20px;
 }
 .input input:hover {
